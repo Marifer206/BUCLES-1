@@ -50,13 +50,25 @@ print(a, b, sep = ", ") # valores finales de a y b
 ### EJERCICIO #3  :space_invader:
 Diseñe un algoritmo que pida un valor entero, y que siga leyendo valores enteros mientras que alguno de esos valores no represente el código ASCII de una letra mayúscula en el abc del inglés.
 
+<div align='center'>
+<figure> <img src="https://i.postimg.cc/7hH1sGJ1/image.png" alt="" width="600" height="auto"/></br>
+<figcaption><b>Tabla de caracteres con equivalente en ASCII.</b></figcaption></figure>
+</div>
+
 #### CODIGO DEL PROGRAMA
 ```ruby
-
+num : int = 0 # inicializa num en 0
+while num < 65 or num > 90: # mientras sea menor de 65 o mayor de 90
+  num = int(input("Ingrese un entero: ")) # usuario mete el numero entero
+  print("El entero " + str(num) + " corresponde al caracter " + chr(num)) # Caracter que corresponde al numero
 ```
 
 :checkered_flag: El programa ejecutado se ve asi
 
+<div align='center'>
+<figure> <img src="https://i.postimg.cc/v83k77GM/image.png" alt="" width="700" height="auto"/></br>
+<figcaption><b>Codigo donde <i> num </i> ingresan al ciclo y se ejecuta hasta que corresponda a una letra en mayuscula en el código ASCII </b></figcaption></figure>
+</div>
 
 
 ## PUNTOS DEL RETO
