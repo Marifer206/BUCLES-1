@@ -119,7 +119,7 @@ print("Numeros Impares" + str(impares)) # imprime la lista de impares
 
 <div align='center'>
 <figure> <img src="https://i.postimg.cc/pdnmPKtz/image.png" alt="" width="700" height="auto"/></br>
-<figcaption><b>Codigo donde <i> X </i> ingresan al ciclo y se ejecuta hasta hacer un listado de numeros pares hasta 1000 y otro de numeros impares hasta 999</b></figcaption></figure>
+<figcaption><b>Codigo donde <i> x </i> ingresan al ciclo y se ejecuta hasta hacer un listado de numeros pares hasta 1000 y otro de numeros impares hasta 999</b></figcaption></figure>
 </div>
 
 ### PUNTO #3  :space_invader:
@@ -128,12 +128,23 @@ Imprimir los números pares en forma descendente hasta 2 que son menores o igual
 
 #### CODIGO DEL PROGRAMA
 ```ruby
-
+pares = [] # Crea una lista vacía para los números pares
+n = int(input("Ingrese un número natural mayor o igual a 2: ")) # Declara e inicializa variable con valor dado por el usuario
+# Imprime los números pares en forma descendente hasta 2
+while n >= 2: # Mientras que n sea mayor o igual a 2
+    pares.append(n)
+    n -= 2 # Disminuye de dos en dos para que pueda imprimirse de manera descendente
+    if n % 2 != 0: # Descarta los numeros impares
+        continue
+print("Numeros pares de forma descendente " + str(pares)) # Imprime la lista pares en forma descendente hasta 2
 ```
 
 :checkered_flag: El programa ejecutado se ve asi
 
-
+<div align='center'>
+<figure> <img src="https://i.postimg.cc/YCwwVgCh/image.png" alt="" width="700" height="auto"/></br>
+<figcaption><b>Codigo donde <i> n </i> ingresan al ciclo y se ejecuta y hace un listado de numeros pares en forma descendente hasta el 2 999</b></figcaption></figure>
+</div>
 
 ### PUNTO #4  :space_invader:
 En 2022 el país A tendrá una población de 25 millones de habitantes y el país B de 18:9 millones. Las tasas de crecimiento anual de la población serán de 2% y 3% respectivamente. Desarrollar un algoritmo para informar en que año la población del país B superará a la de A.
