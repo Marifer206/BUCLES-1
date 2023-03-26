@@ -77,11 +77,22 @@ Imprimir un listado con los números del 1 al 100 cada uno con su respectivo cua
 
 #### CODIGO DEL PROGRAMA
 ```ruby
+import math
+x : int = 0 # inicializa la variable x en 0
+while (x <= 100) : # mientras x sea menor o igual a 100
+    x +=1 # incrementa el valor de x en 1
+    if x == 101:# si x es igual a 101, se salta al siguiente ciclo
+        continue
+    n:int = math.pow (x,2) # calcula el cuadrado de x y lo almacena en la variable n
+    print("el cuadrado de " + str(x) + " es " + str(n) ) # imprime el resultado del cuadrado de x
 
 ```
 :checkered_flag: El programa ejecutado se ve asi
 
-
+<div align='center'>
+<figure> <img src="https://i.postimg.cc/1tXk1zQn/image.png" alt="" width="700" height="auto"/></br>
+<figcaption><b>Codigo donde <i> X </i> ingresan al ciclo y se ejecuta hasta hacer un listado de 1 al 100 con sus respectivos cuadrados</b></figcaption></figure>
+</div>
 
 ### PUNTO #2  :space_invader:
 Imprimir un listado con los números impares desde 1 hasta 999 y seguidamente otro listado con los números pares desde 2 hasta 1000.
