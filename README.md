@@ -257,13 +257,51 @@ while True: # Utilizamos la sentencia while true para hacer un bucle infinito ha
 ### :round_pushpin: PUNTO #7 
 + Implementar un programa que ingrese un número de 2 a 50 y muestre sus divisores.
 
+#### SOLUCION 1 SIN RANGO
 #### :space_invader: CODIGO DEL PROGRAMA
 ```ruby
-
+divisores = [] # Creamos una lista vacia para los divisores
+x = int(input("Ingrese el número del cual quiera saber sus divisores: ")) # Inicializamos variable con valor (numero entero) dado por el usuario 
+i = 1 # inicializamos i en 1
+while i <= x: # mientras i sea menor o igual a x
+    if x % i == 0: 
+        divisores.append(i)
+    i += 1 # Actualizamos variable para continuar evaluando el siguiente numero 
+print("Los divisores de " + str(x) + " son " + str(divisores)) # imprimimos resulado de los divisoes de x
 ```
 
 :checkered_flag: **EL PROGRAMA EJECUTADO SE VE ASI**
 
+<div align='center'>
+<figure> <img src="https://i.postimg.cc/fby1LGZ0/image.png" alt="" width="700" height="auto"/></br>
+<figcaption><b>Codigo donde <i> x </i> ingresa al ciclo y se ejecuta hasta encontrar todos sus divisores por medio de un modulo </b></figcaption></figure>
+</div>
+
+#### SOLUCION 2 CON RANGO DE 2 A 50
+#### :space_invader: CODIGO DEL PROGRAMA
+```ruby
+numero = int(input("Ingrese un número entre 2 y 50: ")) # Pedir al usuario que le de valor a la variable numero entre 2 y 50
+while numero < 2 or numero > 50: # Mientras que numero sea menor a 2 y mayor a 50
+    print("Número inválido, intente de nuevo.")
+    numero = int(input("Ingrese un número entre 2 y 50: "))
+
+divisores = [] # Inicializar una lista vacía para los divisores
+i = 1 # Inicializar un i en 1
+
+while i <= numero: # mientras que i sea menor o igual a numero
+    if numero % i == 0:
+        divisores.append(i)
+    i += 1 # actualizar variable para el siguiente numero
+
+print(f"Los divisores de {numero} son: {divisores}") # imprimir los divisores de numero
+```
+
+:checkered_flag: **EL PROGRAMA EJECUTADO SE VE ASI**
+
+<div align='center'>
+<figure> <img src="https://i.postimg.cc/fby1LGZ0/image.png" alt="" width="700" height="auto"/></br>
+<figcaption><b>Codigo donde <i> numero </i> ingresa a un primer ciclo para ver si entra en el rango y si es asi entra a l segundo para encontrar todos sus divisores por medio de un modulo </b></figcaption></figure>
+</div>
 
 ### :round_pushpin: PUNTO #8  
 + Implementar el algoritmo que muestre los números primos del 1 al 100. nota: use funciones
