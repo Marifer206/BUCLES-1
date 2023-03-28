@@ -94,6 +94,19 @@ while (x <= 100) : # mientras x sea menor o igual a 100
 <figcaption><b>Codigo donde <i> X </i> ingresan al ciclo y se ejecuta hasta hacer un listado de 1 al 100 con sus respectivos cuadrados</b></figcaption></figure>
 </div>
 
+#### DIAGRAMA DE FLUJO
+```mermaid
+graph TD;
+    A(Inicio) --> B[Importar modulo math]
+    B --> D[Declarar x como entero e inicializarla en 0]
+    D --> E{x es menor o igual a 100}
+    E --> |SI| F[actualizar variable incrementa el valor de x de 1 en 1 x +=1]
+    E --> |NO| H[Terminar ciclo]
+    H --> I[imprimir los resultados de n que es el cuadrado de x] --> Z(Fin) 
+    F --> G[inicializar variable n con el valor del resultado de la operacion del modulo math.pow x,2, que es el cuadrado de cada numero]
+    G --> E
+```
+
 ### :round_pushpin: PUNTO #2 
 + Imprimir un listado con los números impares desde 1 hasta 999 y seguidamente otro listado con los números pares desde 2 hasta 1000.
 
@@ -122,6 +135,22 @@ print("Numeros Impares" + str(impares)) # imprime la lista de impares
 <figcaption><b>Codigo donde <i> x </i> ingresan al ciclo y se ejecuta hasta hacer un listado de numeros pares hasta 1000 y otro de numeros impares hasta 999</b></figcaption></figure>
 </div>
 
+#### DIAGRAMA DE FLUJO
+```mermaid
+graph TD;
+ A(Inicio) --> B[crea una listas vacía para los números pares e impares]
+    B --> D[Declarar x como entero e inicializarla en 0]
+    D --> E{x es menor o igual a 1000} 
+    E --> |SI| F[actualizar variable incrementa el valor de x de 1 en 1 x +=1]
+    E --> |NO| H[Terminar ciclo]
+    H --> I[imprimir las listas de numeros pares e impares entre el rango 0 y 1000]
+    F --> G{El modulo de x % 2 es igual 0}
+    G --> |SI| J[Meter x en la lista vacia de pares]
+    G --> |NO| K[Meter x en la lista vacia de impares]
+    J --> E
+    K --> E
+```
+    
 ### :round_pushpin: PUNTO #3  
 + Imprimir los números pares en forma descendente hasta 2 que son menores o iguales a un número natural n ≥ 2 dado
 
@@ -145,6 +174,12 @@ print("Numeros pares de forma descendente " + str(pares)) # Imprime la lista par
 <figure> <img src="https://i.postimg.cc/YCwwVgCh/image.png" alt="" width="700" height="auto"/></br>
 <figcaption><b>Codigo donde <i> n </i> ingresan al ciclo y se ejecuta y hace un listado de numeros pares en forma descendente hasta el 2 999</b></figcaption></figure>
 </div>
+
+#### DIAGRAMA DE FLUJO
+```mermaid
+graph TD;
+
+```
 
 ### :round_pushpin: PUNTO #4 
 + En 2022 el país A tendrá una población de 25 millones de habitantes y el país B de 18:9 millones. Las tasas de crecimiento anual de la población serán de 2% y 3% respectivamente. Desarrollar un algoritmo para informar en que año la población del país B superará a la de A.
