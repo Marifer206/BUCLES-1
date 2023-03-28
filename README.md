@@ -143,7 +143,7 @@ graph TD;
     D --> E{x es menor o igual a 1000} 
     E --> |SI| F[actualizar variable incrementa el valor de x de 1 en 1 x +=1]
     E --> |NO| H[Terminar ciclo]
-    H --> I[imprimir las listas de numeros pares e impares entre el rango 0 y 1000]
+    H --> I[imprimir las listas de numeros pares e impares entre el rango 0 y 1000] --> Z(Fin) 
     F --> G{El modulo de x % 2 es igual 0}
     G --> |SI| J[Meter x en la lista vacia de pares]
     G --> |NO| K[Meter x en la lista vacia de impares]
@@ -161,10 +161,11 @@ pares = [] # Crea una lista vacía para los números pares
 n = int(input("Ingrese un número natural mayor o igual a 2: ")) # Declara e inicializa variable con valor dado por el usuario
 # Imprime los números pares en forma descendente hasta 2
 while n >= 2: # Mientras que n sea mayor o igual a 2
-    pares.append(n)
-    n -= 2 # Disminuye de dos en dos para que pueda imprimirse de manera descendente
-    if n % 2 != 0: # Descarta los numeros impares
-        continue
+    if n % 2 == 0: # si el modulo de n es igual a 0 es par y se mete en la lista
+        pares.append(n)
+        n -= 2 # se actualiza la variable disminuyendola de 2 en 2
+    if n % 2 != 0: # si el modulo de n no es igual a 0 es impar
+        n-=1 # se le resta 1 para volverlo par
 print("Numeros pares de forma descendente " + str(pares)) # Imprime la lista pares en forma descendente hasta 2
 ```
 
@@ -178,7 +179,17 @@ print("Numeros pares de forma descendente " + str(pares)) # Imprime la lista par
 #### DIAGRAMA DE FLUJO
 ```mermaid
 graph TD;
-
+    A(Inicio) --> B[crea una lista vacía para los números pares]
+    B --> D[Declarar x como entero e inicializarla con el valor dado por el usuario]
+    D --> E{x es mayor o igual a 2} 
+    E --> |SI| F{El modulo de x % 2 es igual 0}
+    E --> |NO| H[Terminar ciclo]
+    H --> I[imprimir las lista de numeros pare dentro del rando de 2 a x] --> Z(Fin) 
+    F --> |SI| J[Meter n en la lista vacia de pares]
+    F --> |NO| K[Se resta a n 1 para convertirlo en par]
+    J --> O[Se actualiza variable disminuyendola de 2 en 2]
+    K --> E
+    O --> E
 ```
 
 ### :round_pushpin: PUNTO #4 
